@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 
 char GRADE[3][10]={"Deluxe", "Luxury", "Suite"}; // 객실등급 명칭 
 
@@ -22,6 +23,8 @@ void findRoom(struct st_card* p[], int n);	// 빈 객실 찾기
 int addCards(struct st_card* p[], int n);	// 객실 추가 
 
 int main(){
+  SetConsoleOutputCP(65001);
+  SetConsoleCP(65001);
   struct st_card* cards[50]; 	// 최대 50개의 객실을 관리할 수 있는 구조체 포인터 배열
   int count;	// 현재 등록된 카드 수
   int menu;	// 메뉴번호
